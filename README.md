@@ -15,4 +15,3 @@ Run the below command in terminal inside the cloned repository
 ```sh
 $ docker-compose up --build
 ```
-
