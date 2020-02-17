@@ -4,8 +4,8 @@ This is a feedback application has rating, comment and a file submission.
 
 # Prerequisite
 
-* [ Docker Compose ]
-* [ Ports ] : 3306,5000 need not be occupied
+* [Docker Compose]
+* [Ports] : 3306,5000 need not be occupied
 
 # Command For Startup
 
