@@ -12,7 +12,7 @@ This is a feedback application having options for rating, comment and a file sub
 ```sh
 $ realpath Feedback_application/
 ```
-* Paste above command output into docker-compose.yml file.
+* Paste above command output into docker-compose.yml file in two places.
 
 # Command For Startup
 
