@@ -1,6 +1,6 @@
 # Feedback_application for H20
 
-This is a feedback application has rating, comment and a file submission. 
+This is a feedback application having options for rating, comment and a file submission. 
 
 # Prerequisite
 
