@@ -12,7 +12,7 @@ This is a feedback application has rating, comment and a file submission.
 Run the below command in terminal inside the cloned repository
 
 ```sh
-$ cd $feedback_application
+$ cd feedback_application
 $ docker-compose up --build
 ```
 
