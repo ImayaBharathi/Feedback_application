@@ -1,17 +1,17 @@
 version: '3'
 services:
   web:
-    build: "~/Imaya/image_folder/image_config_web" 
+    build: "<provide realpath of git directory>/image_folder/mysql/"
     ports:
       - "5000:5000"
 
   mysql:
     build:
-        context: "/home/kannank/Imaya/image_folder/mysql/"
+        context: "<provide realpath of git directory>/image_folder/mysql/"
 
-    environment: 
+    environment:    
       MYSQL_DATABASE: "feedback_db"
-      # So you don't have to use root, but you can if you like
+      # Creating a user, So you don't have to use root, but you can if you like
       MYSQL_USER: 'user'
       # You can use whatever password you like
       MYSQL_PASSWORD: 'password'
