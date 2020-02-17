@@ -10,8 +10,9 @@ This is a feedback application having options for rating, comment and a file sub
 * Provide realpath of git folder location on docker-compose.yml file
  use the below command in terminal inside git folder to find the absolute path
 ```sh
-$ realpath .
+$ realpath Feedback_application/
 ```
+* Paste above command output into docker-compose.yml file.
 
 # Command For Startup
 
