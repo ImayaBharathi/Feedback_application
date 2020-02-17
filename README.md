@@ -13,7 +13,6 @@ This is a feedback application having options for rating, comment and a file sub
 Run the below command in terminal inside the cloned repository
 
 ```sh
-$ cd feedback_application
 $ docker-compose up --build
 ```
 
