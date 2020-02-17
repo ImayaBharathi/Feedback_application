@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div>
+<div style="height: 50%;">
+<h1> User Feed Back Page</h1>
+<form method="POST" action="/submit/" >
+<h3> Rate Your Experience</h3>
+<span  onclick="starmark(this)" id="1one" style="font-size:40px;cursor:pointer;"  class="fa fa-star "></span>
+<span  onclick="starmark(this)" id="2one"  style="font-size:40px;cursor:pointer;" class="fa fa-star "></span>
+<span  onclick="starmark(this)" id="3one"  style="font-size:40px;cursor:pointer;" class="fa fa-star "></span>
+<span  onclick="starmark(this)" id="4one"  style="font-size:40px;cursor:pointer;" class="fa fa-star"></span>
+<span  onclick="starmark(this)" id="5one"  style="font-size:40px;cursor:pointer;" class="fa fa-star"></span>
+<br/><br>
+<h4>Provide Your Feedback Below : </h4>
+<textarea  style="margin-top:5px;" cols="100" rows="5" id="comment" placeholder="Enter your comment"></textarea> <br>
+<br/>
+<div class="form-group">
+<label for="logFile" style="font-size: medium;">Select a Log file For Reference:</label>
+<input type="file" id="logFile" name="logFile">
+</div>
+</form>
+<button type="submit" style="margin-top:10px;margin-left:5px;" id="submit" class="btn btn-lg btn-success">Submit</button>
+<!-- <button  onclick="submit()" type="button" style="margin-top:10px;margin-left:5px;" id="btn" class="btn btn-lg btn-success">Submit</button> -->
+</div>
+<br>
+<div style="height: 50;">
+</div>
+
+</body>
+
+<script>
+var count;
+var rating;
+var comment;
+var file_name;
+function starmark(item)
+{
+count=item.id[0];
+sessionStorage.starRating = count;
+var subid= item.id.substring(1);
+for(var i=0;i<5;i++)
+{
+if(i<count)
+{
+document.getElementById((i+1)+subid).style.color="orange";
+}
+else
+{
+document.getElementById((i+1)+subid).style.color="black";
+}
+}
+}
+
+$('#submit').on('click', function(event) {
+console.log('herrer')
+rating = count //value I want to send 
+comment = document.getElementById("comment").value
+file_name = document.getElementById("logFile").value  
+$.ajax({
+  data : {
+    "rating":rating,"comment":comment,"file_name":file_name
+  },
+  type : 'POST',
+  url : '/submit'
+})
+});
+
+</script>
+</div>
+</html>
