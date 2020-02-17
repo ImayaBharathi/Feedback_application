@@ -7,6 +7,11 @@ This is a feedback application having options for rating, comment and a file sub
 * [Docker Compose]
 * [Docker]
 * [Ports] : 3306,5000 need not be occupied
+* Provide realpath of git folder location on docker-compose.yml file
+ use the below command in terminal inside git folder to find the absolute path
+```sh
+$ realpath .
+```
 
 # Command For Startup
 
